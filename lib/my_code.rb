@@ -7,7 +7,8 @@ def map(array)
   new_arr
 end
 
-def reduce(array, start=0)
+def reduce(array, start=nil)
+  
   array.each do |elem|
     start = yield(start, elem)
   end
