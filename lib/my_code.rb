@@ -8,7 +8,10 @@ def map(array)
 end
 
 def reduce(array, start=nil)
-  
+  if start
+    memo = start
+  else
+    memo = array[0]
   array.each do |elem|
     start = yield(start, elem)
   end
