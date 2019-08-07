@@ -12,8 +12,10 @@ def reduce(array, start=nil)
     memo = start
   else
     memo = array[0]
-  array.each do |elem|
-    start = yield(start, elem)
   end
-  start
+  
+  array.each do |elem|
+    memo = yield(memo, elem)
+  end
+  memo
 end
