@@ -18,8 +18,7 @@ def reduce(array, start=nil)
   
   while i < array.length 
     memo = yield(memo, array[i])
-  array.each do |elem|
-    memo = yield(memo, elem)
+    i += 1
   end
   memo
 end
