@@ -9,8 +9,10 @@ end
 
 def reduce(array, start=nil)
   if start
+    i = 0
     memo = start
   else
+    i = 1
     memo = array[0]
   end
   
